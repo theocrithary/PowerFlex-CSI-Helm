@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+   name: vxflexos-certs
+   namespace: powerflex
+type: Opaque
+data:

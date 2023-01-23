@@ -1,0 +1,15 @@
+- username: "admin"
+  password: "sgeqx_R3dH@T!"
+  systemID: "789532653e351c0f"
+  endpoint: "https://192.168.112.50"
+  skipCertificateValidation: true
+  mdm: "192.168.112.51,192.168.112.52,192.168.112.53"
+  isDefault: true
+
+- username: "admin"
+  password: "sgeqx_R3dH@T!"
+  systemID: "07aca39f78ebfb0f"
+  endpoint: "https://10.0.0.191"
+  skipCertificateValidation: true
+  mdm: "10.0.0.77,10.0.0.30,10.0.0.154"
+  isDefault: false

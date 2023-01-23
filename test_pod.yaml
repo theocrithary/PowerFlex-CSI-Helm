@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: theo-test-pod1
+  namespace: theo
+spec:
+  containers:
+  - name: test
+    image: docker.io/centos:latest
+    command: [ "/bin/sleep", "3600" ]
+    volumeMounts:
+    - name: pvol0-powerflex-eqx
+      mountPath: "/data0-eqx"
+    - name: pvol0-powerflex-aws
+      mountPath: "/data1-aws"
+  volumes:
+    - name: pvol0-powerflex-eqx
+      persistentVolumeClaim:
+        claimName: pvol0-powerflex-eqx
+    - name: pvol0-powerflex-aws
+      persistentVolumeClaim:
+        claimName: pvol0-powerflex-aws
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: theo-test-pod2
+  namespace: theo
+spec:
+  containers:
+  - name: test
+    image: docker.io/centos:latest
+    command: [ "/bin/sleep", "3600" ]
+    volumeMounts:
+    - name: pvol1-powerflex-eqx
+      mountPath: "/data0-eqx"
+    - name: pvol1-powerflex-aws
+      mountPath: "/data1-aws"
+  volumes:
+    - name: pvol1-powerflex-eqx
+      persistentVolumeClaim:
+        claimName: pvol1-powerflex-eqx
+    - name: pvol1-powerflex-aws
+      persistentVolumeClaim:
+        claimName: pvol1-powerflex-aws
