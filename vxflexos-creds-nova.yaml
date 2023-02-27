@@ -1,7 +1,0 @@
-- username: "admin"
-  password: "sgeqx_R3dH@T!"
-  systemID: "242e5c6c3aa24b0f"
-  endpoint: "https://192.168.112.50"
-  skipCertificateValidation: true
-  isDefault: true
-  mdm: "192.168.112.51,192.168.112.52"
