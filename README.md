@@ -1,13 +1,8 @@
-# PowerFlex-CSI-OpenShift-Console
+# PowerFlex-CSI-Helm
 
 ## Create a new project
 - e.g. powerflex
-
-## Create vxflexos-creds secret
-- ensure the new project 'powerflex' is selected when creating the new secrets
-- create a new key/value secret with the secret name = vxflexos-creds and key = config
-- use the vxflexos-creds.yaml file included in this repo as reference and paste into the text field
-- edit with your environment details (e.g. endpoint IP address, username, password)
+kubectl create namespace powerflex
 
 ## Create vxflexos-config secret
 - ensure the new project 'powerflex' is selected when creating the new secrets
@@ -15,10 +10,7 @@
 - use the vxflexos-config.yaml file included in this repo as reference and paste into the text field
 - edit with your environment details (e.g. endpoint IP address, username, password)
 
-## Create vxflexos-certs secret
-- create a new secret from yaml
-- use the vxflexos-certs.yaml file included in this repo and replace the default yaml template
-- no further changes are required
+
 
 ## Create vxflexos-config-params ConfigMap
 - create a new ConfigMap
