@@ -47,13 +47,14 @@ dell-csi-helm-installer/csi-install.sh --namespace powerflex --values config/val
 oc get pods -n powerflex
 ```
 
-> NAME                                   READY   STATUS    RESTARTS   AGE
-> vxflexos-controller-6dbf64f6fb-fnf86   5/5     Running   0          2m50s
-> vxflexos-controller-6dbf64f6fb-vw9zc   5/5     Running   0          2m50s
-> vxflexos-node-jl7pr                    2/2     Running   0          2m50s
-> vxflexos-node-k27vs                    2/2     Running   0          2m50s
-> vxflexos-node-k8kld                    2/2     Running   0          2m50s
-
+```
+NAME                                   READY   STATUS    RESTARTS   AGE
+vxflexos-controller-6dbf64f6fb-fnf86   5/5     Running   0          2m50s
+vxflexos-controller-6dbf64f6fb-vw9zc   5/5     Running   0          2m50s
+vxflexos-node-jl7pr                    2/2     Running   0          2m50s
+vxflexos-node-k27vs                    2/2     Running   0          2m50s
+vxflexos-node-k8kld                    2/2     Running   0          2m50s
+```
 
 ## Create storage class
 ```
