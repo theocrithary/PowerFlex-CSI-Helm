@@ -29,7 +29,7 @@ kubectl -n kube-system kustomize deploy/kubernetes/snapshot-controller | kubectl
 
 ## Clone the CSI driver repo
 ```
-git clone -b v2.5.0 https://github.com/dell/csi-powerflex.git
+git clone -b v2.6.0 https://github.com/dell/csi-powerflex.git
 ```
 
 ## Create vxflexos-config secret
