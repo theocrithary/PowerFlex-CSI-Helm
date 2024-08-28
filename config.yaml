@@ -4,4 +4,4 @@
   endpoint: "https://###gateway_IP######"
   skipCertificateValidation: true
   isDefault: true
-  mdm: "192.168.x.x,192.168.x.x, 192.168.x.x"
+  mdm: "#### MDM VIP ####"
