@@ -1,7 +1,7 @@
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshotClass
 metadata:
-  name: vxflexos-snapclass
+  name: powerflex-snapclass
 driver: csi-vxflexos.dellemc.com
 # Configure what happens to a VolumeSnapshotContent when the VolumeSnapshot object
 # it is bound to is to be deleted
