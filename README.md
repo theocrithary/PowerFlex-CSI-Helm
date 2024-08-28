@@ -18,18 +18,9 @@ yum install git
 oc new-project powerflex
 ```
 
-## Install the external snapshot controller
-```
-git clone https://github.com/kubernetes-csi/external-snapshotter/
-cd ./external-snapshotter
-git checkout release-6.2
-kubectl kustomize client/config/crd | kubectl create -f -
-kubectl -n kube-system kustomize deploy/kubernetes/snapshot-controller | kubectl create -f -
-```
-
 ## Clone the CSI driver repo
 ```
-git clone -b v2.6.0 https://github.com/dell/csi-powerflex.git
+git clone -b v2.10.1 https://github.com/dell/csi-powerflex.git
 ```
 
 ## Create vxflexos-config secret
@@ -48,12 +39,12 @@ oc get pods -n powerflex
 ```
 
 ```
-NAME                                   READY   STATUS    RESTARTS   AGE
-vxflexos-controller-6dbf64f6fb-fnf86   5/5     Running   0          2m50s
-vxflexos-controller-6dbf64f6fb-vw9zc   5/5     Running   0          2m50s
-vxflexos-node-jl7pr                    2/2     Running   0          2m50s
-vxflexos-node-k27vs                    2/2     Running   0          2m50s
-vxflexos-node-k8kld                    2/2     Running   0          2m50s
+NAME                                   READY   STATUS    RESTARTS        AGE
+vxflexos-controller-5fccf558d8-2gpnm   5/5     Running   0               5m
+vxflexos-controller-5fccf558d8-v5z26   5/5     Running   1 (4m19s ago)   5m
+vxflexos-node-9r5dg                    2/2     Running   0               5m
+vxflexos-node-fhph6                    2/2     Running   0               5m
+vxflexos-node-xrb7t                    2/2     Running   0               5m
 ```
 
 ## Create storage class
